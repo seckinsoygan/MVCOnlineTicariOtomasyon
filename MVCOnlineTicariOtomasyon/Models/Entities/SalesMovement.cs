@@ -14,8 +14,8 @@ namespace MVCOnlineTicariOtomasyon.Models.Entities
 		public int Amount { get; set; }
 		public decimal Price { get; set; }
 		public decimal TotalAmount { get; set; }
-		public Product Products { get; set; }
-		public Current Currents { get; set; }
-		public Employee Employees { get; set; }
+		public Product Product { get; set; }
+		public Current Current { get; set; }
+		public Employee Employee { get; set; }
 	}
 }
