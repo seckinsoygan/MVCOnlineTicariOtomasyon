@@ -20,7 +20,7 @@ namespace MVCOnlineTicariOtomasyon.Models.Entities
 		[Column(TypeName = "Varchar")]
 		[StringLength(250)]
 		public string EmployeeImage { get; set; }
-		public SalesMovements SalesMovements { get; set; }
+		public ICollection<SalesMovement> SalesMovements { get; set; }
 		public Department Department { get; set; }
 	}
 }

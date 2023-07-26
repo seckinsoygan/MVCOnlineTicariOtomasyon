@@ -25,6 +25,6 @@ namespace MVCOnlineTicariOtomasyon.Models.Entities
 		[StringLength(250)]
 		public string ProductImage { get; set; }
 		public Category Category { get; set; }
-		public SalesMovements SalesMovements { get; set; }
+		public ICollection<SalesMovement> SalesMovements { get; set; }
 	}
 }
