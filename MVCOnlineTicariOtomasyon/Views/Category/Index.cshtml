@@ -1,4 +1,6 @@
-﻿
+﻿@using MVCOnlineTicariOtomasyon.Models.Entities
+@model List<Category>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/AdminLayout.cshtml";
@@ -7,21 +9,24 @@
 <table class="table table-bordered" style="margin-top:20px; margin-left:20px; margin-right:20px">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sil</th>
         </tr>
     </thead>
     <tbody>
+        @foreach(var item in Model){
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
+            <th scope="row">@item.CategoryId</th>
+            <td>@item.Name</td>
+            <td><a href="#" class="btn btn-success">Güncelle</a></td>
+            <td><a href="#" class="btn btn-danger">Sil</a></td>
         </tr>
+        }
+
     </tbody>
 </table>
-<button class="btn btn-primary" style="width:200px;margin-left:20px">Yeni Kategori</button>
+<a href="/Category/AddCategory" class="btn btn-primary" style="width:200px;margin-left:20px">Yeni Kategori</a>
 
 
