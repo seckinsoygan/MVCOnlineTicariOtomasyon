@@ -29,5 +29,25 @@ namespace MVCOnlineTicariOtomasyon.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult DeleteCategory(int id)
+		{
+            var deletedCategory = context.Categories.Find(id);
+            context.Categories.Remove(deletedCategory);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+		}
+        public ActionResult GetCategory(int id)
+		{
+            var category = context.Categories.Find(id);
+            return View("GetCategory",category);
+		}
+        public ActionResult UpdateCategory(Category c)
+		{
+            var updatedCategory = context.Categories.Find(c.CategoryId);
+            updatedCategory.Name = c.Name;
+            context.SaveChanges();
+            return RedirectToAction("Index");
+		}
     }
 }

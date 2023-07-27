@@ -1,0 +1,19 @@
+﻿@model MVCOnlineTicariOtomasyon.Models.Entities.Category
+
+@{
+    ViewBag.Title = "GetCategory";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>Kategori Güncelle</h2>
+
+@using (Html.BeginForm("UpdateCategory", "Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Name)
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @Html.HiddenFor(x=>x.CategoryId)
+    </div>
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+}

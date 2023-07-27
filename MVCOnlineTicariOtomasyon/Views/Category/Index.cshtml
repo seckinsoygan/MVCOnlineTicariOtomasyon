@@ -20,8 +20,8 @@
         <tr>
             <th scope="row">@item.CategoryId</th>
             <td>@item.Name</td>
-            <td><a href="#" class="btn btn-success">Güncelle</a></td>
-            <td><a href="#" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Category/GetCategory/@item.CategoryId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
         </tr>
         }
 
